@@ -223,6 +223,63 @@
             letter-spacing: 0.15em;
             text-transform: uppercase;
         }
+
+        /* Personalización de Controles de Navegación */
+        .reveal .controls {
+            right: 20px !important;
+            bottom: 20px !important;
+            width: auto !important;
+            height: auto !important;
+            display: flex !important;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 30px;
+        }
+
+        .reveal .controls .navigate-left,
+        .reveal .controls .navigate-right {
+            position: relative !important;
+            /* Override default absolute positioning */
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+            display: flex !important;
+            align-items: center;
+            opacity: 1 !important;
+            color: var(--accent) !important;
+            width: auto !important;
+            height: auto !important;
+        }
+
+        /* Ocultar flechas arriba/abajo si no se usan */
+        .reveal .controls .navigate-up,
+        .reveal .controls .navigate-down {
+            display: none !important;
+        }
+
+        /* Texto para Avanzar/Retroceder */
+        .reveal .controls .navigate-left::after {
+            content: "RETROCEDER";
+            font-size: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-left: 5px;
+            letter-spacing: 1px;
+        }
+
+        .reveal .controls .navigate-right::before {
+            content: "AVANZAR";
+            font-size: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--white);
+            margin-right: 5px;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 
